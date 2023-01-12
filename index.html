@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+            rel="stylesheet" />
+    </head>
+    <body class="bg-white">
+        <div
+            class="container min-h-screen max-w-screen-xl mx-auto md:grid md:grid-cols-2">
+            <!-- Contenido izquierdo -->
+            <div
+                class="col-span-1 bg-white  relative  md:bg-slate-50 p-16 flex flex-col justify-between md:shadow-md md:shadow-gray-300">
+                <div class="flex flex-col gap-6">
+                    <div class="flex gap-2 items-center justify-between w-full">
+                        <div class="flex gap-2 items-center">
+                            <img src="./src/assets/img/image 3.png" alt="" />
+
+                            <span class="text-gray-900">Powdur</span>
+                        </div>
+
+                        <div id="abrir-menu" class="flex gap-1 md:hidden">
+                            <span class="text-gray-500">Details</span>
+                            <i class="ri-arrow-down-s-line text-gray-500"></i>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:flex md:flex-col">
+                        <span class="text-gray-500">Pay Powder</span>
+                        <span class="text-2xl font-semibold">$ 133.23</span>
+                    </div>
+
+                    <!-- Caja productos -->
+                    <div
+                        id="productos"
+                        class="hidden  w-full z-40  md:static md:flex transition-all delay-150 flex-col gap-5">
+                        <div class="flex justify-between">
+                            <div class="flex gap-2">
+                                <img src="./src/assets/img/image4.png" alt="" />
+                                <div>
+                                    <span>Pure set</span>
+                                    <div>
+                                        <span class="text-gray-500">Qti</span>
+                                        <button>
+                                            1
+                                            <i
+                                                class="ri-arrow-down-s-line text-gray-500"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="text-gray-900 font-semibold"
+                                >$65.00</span
+                            >
+                        </div>
+
+                        <div class="flex justify-between">
+                            <div class="flex gap-2">
+                                <img src="./src/assets/img/image5.png" alt="" />
+                                <div>
+                                    <span>Pure set</span>
+                                    <div>
+                                        <span class="text-gray-500">Qti</span>
+                                        <button>
+                                            2
+                                            <i
+                                                class="ri-arrow-down-s-line text-gray-500"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex flex-col text-gray-900 font-semibold">
+                                <span>$64.00</span>
+                                <span class="text-gray-500 line-through"
+                                    >$32.00</span
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Valores -->
+                        <div
+                            class="w-full flex justify-end pt-8 text-gray-900 font-semibold">
+                            <div
+                                class="w-4/5 md:1/2 h-28 flex flex-col justify-between items-end">
+                                <div
+                                    class="border-b-2 md:border-none pb-3 md:pb-0 w-full flex justify-between">
+                                    <span>Subtotal</span>
+                                    <span>$129.00</span>
+                                </div>
+
+                                <div
+                                    class="border-b-2 md:border-none pb-3 md:pb-0 w-full flex justify-between">
+                                    <span class="text-gray-500"
+                                        >Sales tax(6.5%)</span
+                                    >
+                                    <span class="text-gray-500">$4.23</span>
+                                </div>
+                                <div class="w-full flex justify-between">
+                                    <span>Total due</span>
+                                    <span>$133.23</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terminos y priv -->
+
+                <div class="hidden md:flex items-center gap-8 justify-left">
+                    <p class="text-gray-500">
+                        Powered by <span class="font-bold text-lg">stripe</span>
+                    </p>
+                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-500">Terms Privacy</span>
+                </div>
+
+                <!-- LADO MOBILE -->
+                <div
+                id="menu-mobile"
+                    class="md:hidden  flex flex-col gap-6 mt-16 items-center w-full">
+                    <img
+                        src="./src/assets/img/image4.png"
+                        alt=""
+                        class="w-1/2 rounded" />
+
+                    <div class="flex flex-col mt-6 gap-3 items-center w-full">
+                        <span class="text-gray-500">Pay Powdur</span>
+                        <span class="text-5xl text-gray-700 font-medium"
+                            >$133.23</span
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido derecho -->
+            <div
+                class="col-span-1 bg-white md:shadow-md md:shadow-gray-300 relative px-16 py-5">
+                <div
+                    id="mostrar"
+                    class="hidden md:hidden h-full opacity-40 bg-black absolute top-0 left-0 bottom-0 right-0"></div>
+
+                <button class="bg-black w-full py-3 rounded cursor-pointer">
+                    <img
+                        src="./src/assets/img/Apple Pay.png"
+                        alt=""
+                        class="mx-auto h-6" />
+                </button>
+
+                <div class="w-full my-10 flex justify-center gap-1 mt-12">
+                    <span class="text-gray-300"> _______ </span>
+                    <p class="text-gray-500 text-center translate-y-2">
+                        Or pay with card
+                    </p>
+                    <span class="text-gray-300"> _______ </span>
+                </div>
+
+                <form action="" class="flex flex-col gap-6 mt-16">
+                    <div class="flex flex-col gap-3">
+                        <label for="" class="text-gray-500 font-bold"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            class="border rounded p-2 outline-none" />
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <label for="" class="text-gray-500 font-bold"
+                            >Card number</label
+                        >
+                        <input
+                            type="email"
+                            class="border rounded p-2 outline-none"
+                            placeholder="1234 1234 1234 1234" />
+                        <div class="flex w-full">
+                            <input
+                                type="email"
+                                class="border rounded p-2 w-1/2 outline-none"
+                                placeholder="MM / YY" />
+                            <input
+                                type="email"
+                                class="border rounded p-2 w-1/2 outline-none"
+                                placeholder="CVC" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <label for="" class="text-gray-500 font-bold"
+                            >Name on card</label
+                        >
+                        <input
+                            type=""
+                            class="border rounded p-2 outline-none" />
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <label for="" class="text-gray-500 font-bold"
+                            >Country or región</label
+                        >
+                        <div class="flex flex-col" >
+                          
+                            <select name="" id="" class="py-2 bg-white border rounded text-gray-500">
+                                <option value="United States" class="">
+                                    United States
+                                </option>
+                            </select>
+                            <input
+                                type=""
+                                class="border rounded p-2 outline-none" placeholder="ZIP" />
+                        </div>
+                    </div>
+                    
+                    <button class="bg-gray-800 text-white font-semibold text-lg py-3 mt-8 rounded" >
+                      Pay $133.23
+                    </button>
+                    
+                    
+                </form>
+                
+                <div class=" md:hidden items-center gap-4 flex flex-col w-full mt-6 ">
+                    <p class="text-gray-500">
+                        Powered by <span class="font-bold text-lg">stripe</span>
+                    </p>
+                    
+                    <span class="text-gray-500">Terms Privacy</span>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <script type="module" src="/src/main.js"></script>
+    </body>
+</html>
